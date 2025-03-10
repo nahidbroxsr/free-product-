@@ -32,4 +32,4 @@ function scrollLeft() {
 
 function scrollRight() {
     document.getElementById("story-list").scrollBy({ left: 150, behavior: 'smooth' });
-  }
+}
