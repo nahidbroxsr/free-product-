@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ফ্রি প্রোডাক্ট</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>মেয়ে ছেলে নির্বাচন করে প্রোডাক্ট কিনুন</h1>
+
+        <div class="product">
+            <img src="product1.jpg" alt="প্রোডাক্ট ১">
+            <p>ছেলেদের লিংগ 🧍‍♂️</p>
+            <button class="buy-btn" onclick="openPopup('প্রোডাক্ট ১')">কিনুন ফ্রিতে</button>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="প্রোডাক্ট ২">
+            <p>মেয়েদের যোনিপথ 🧍‍♀️</p>
+            <button class="buy-btn" onclick="openPopup('প্রোডাক্ট ২')">কিনুন ফ্রিতে</button>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>অর্ডার করুন</h2>
+            <p id="selected-product"></p>
+            
+            <label> লিংগ সাইজ নির্বাচন করুন:</label>
+            <select id="size">
+                <option>4 ইঞ্চি</option>
+                <option>6 ইঞ্চি</option>
+                <option>8 ইঞ্চি</option>
+                <option>10 ইঞ্চি</option>
+            </select>
+
+            <label>প্রোডাক্টের ধরন:</label>
+            <select id="type">
+                <option>মোটা</option>
+                <option>শক্ত</option>
+                <option>বেশি মোটা</option>
+                <option>নরমাল</option>
+            </select>
+
+            <label>আপনার নাম্বার:</label>
+            <input type="text" id="phone" placeholder="017xxxxxxxx">
+
+            <label>আপনার ঠিকানা:</label>
+            <textarea id="address" placeholder="ঠিকানা লিখুন"></textarea>
+
+            <button onclick="confirmOrder()">কনফার্ম</button>
+            <button onclick="closePopup()">বাতিল</button>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">অর্ডার পাঠানো হচ্ছে...</div>
+
+    <script src="script.js"></script>
+</body>
+              </html>
