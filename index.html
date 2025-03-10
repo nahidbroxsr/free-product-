@@ -3,61 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ফ্রি প্রোডাক্ট</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>আমার গল্প</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>গল্পের সংগ্রহ</h1>
 
-    <div class="container">
-        <h1>মেয়ে ছেলে নির্বাচন করে প্রোডাক্ট কিনুন</h1>
-
-        <div class="product">
-            <img src="https://www.amazon.com/Sex-Realistic-Flexible-Transsexual-Masturbation/dp/B0DCZKB3PJ/ref=mp_s_a_1_4?crid=27OP07CXJOGNW&dib=eyJ2IjoiMSJ9.4pgOD94GtZu6f3jvJ7-QjUFQX0W8P2-FN2Y5e4EYFRG5R-ANyrhv_LEjBPoIqTpzTUrLWep2IppOmtrmSAWLykLTnEM3-ZXG_OgdSWNtlz2P5q6vlwWD5-_dP7TNKW1LIZCruw_n-ipYq2YzHTYywZqu6uuvK9U1dZC4-7tsWejkNZROss-T78QEPt0YudB6Gn9B5hC0yiAdh_Qk_KmoOw.oPNrSQkwGouUJs3QwPS6r3V5aXngy10_V97VFt2J-Uc&dib_tag=se&keywords=female+masturbators&qid=1741591443&s=hpc&sprefix=female+masturbators%2Caps%2C376&sr=1-4#" alt="প্রোডাক্ট ১">
-            <p>ছেলেদের লিংগ 🧍‍♂️</p>
-            <button class="buy-btn" onclick="openPopup('প্রোডাক্ট ১')">কিনুন ফ্রিতে</button>
+    <div class="story-slider">
+        <button class="prev-btn" onclick="scrollLeft()">❮</button>
+        <div class="story-list" id="story-list">
+            <button onclick="showStory(0)"><img src="story1.jpg"> আমার নাম তুমি</button>
+            <button onclick="showStory(1)"><img src="story2.jpg"> ভালোবাসার গল্প</button>
+            <button onclick="showStory(2)"><img src="story3.jpg"> বন্ধুত্বের গল্প</button>
+            <button onclick="showStory(3)"><img src="story4.jpg"> হাসির গল্প</button>
+            <button onclick="showStory(4)"><img src="story5.jpg"> দুঃখের গল্প</button>
+            <button onclick="showStory(5)"><img src="story6.jpg"> রহস্য গল্প</button>
+            <button onclick="showStory(6)"><img src="story7.jpg"> ভৌতিক গল্প</button>
+            <button onclick="showStory(7)"><img src="story8.jpg"> শিক্ষামূলক গল্প</button>
+            <button onclick="showStory(8)"><img src="story9.jpg"> পারিবারিক গল্প</button>
+            <button onclick="showStory(9)"><img src="story10.jpg"> ঐতিহাসিক গল্প</button>
+            <button onclick="showStory(10)"><img src="story11.jpg"> ছোটদের গল্প</button>
+            <button onclick="showStory(11)"><img src="story12.jpg"> রূপকথার গল্প</button>
+            <button onclick="showStory(12)"><img src="story13.jpg"> যুদ্ধের গল্প</button>
+            <button onclick="showStory(13)"><img src="story14.jpg"> অনুপ্রেরণার গল্প</button>
+            <button onclick="showStory(14)"><img src="story15.jpg"> দেশপ্রেমের গল্প</button>
+            <button onclick="showStory(15)"><img src="story16.jpg"> বিজ্ঞান কল্পকাহিনি</button>
+            <button onclick="showStory(16)"><img src="story17.jpg"> সাহসিকতার গল্প</button>
+            <button onclick="showStory(17)"><img src="story18.jpg"> জীবনের গল্প</button>
+            <button onclick="showStory(18)"><img src="story19.jpg"> সত্য ঘটনা</button>
+            <button onclick="showStory(19)"><img src="story20.jpg"> নতুন গল্প</button>
         </div>
-
-        <div class="product">
-            <img src="https://www.amazon.com/Sex-Realistic-Flexible-Transsexual-Masturbation/dp/B0DCZKB3PJ/ref=mp_s_a_1_4?crid=27OP07CXJOGNW&dib=eyJ2IjoiMSJ9.4pgOD94GtZu6f3jvJ7-QjUFQX0W8P2-FN2Y5e4EYFRG5R-ANyrhv_LEjBPoIqTpzTUrLWep2IppOmtrmSAWLykLTnEM3-ZXG_OgdSWNtlz2P5q6vlwWD5-_dP7TNKW1LIZCruw_n-ipYq2YzHTYywZqu6uuvK9U1dZC4-7tsWejkNZROss-T78QEPt0YudB6Gn9B5hC0yiAdh_Qk_KmoOw.oPNrSQkwGouUJs3QwPS6r3V5aXngy10_V97VFt2J-Uc&dib_tag=se&keywords=female+masturbators&qid=1741591443&s=hpc&sprefix=female+masturbators%2Caps%2C376&sr=1-4#" alt="প্রোডাক্ট ২">
-            <p>মেয়েদের যোনিপথ 🧍‍♀️</p>
-            <button class="buy-btn" onclick="openPopup('প্রোডাক্ট ২')">কিনুন ফ্রিতে</button>
-        </div>
+        <button class="next-btn" onclick="scrollRight()">❯</button>
     </div>
 
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h2>অর্ডার করুন</h2>
-            <p id="selected-product"></p>
-            
-            <label> লিংগ সাইজ নির্বাচন করুন:</label>
-            <select id="size">
-                <option>4 ইঞ্চি</option>
-                <option>6 ইঞ্চি</option>
-                <option>8 ইঞ্চি</option>
-                <option>10 ইঞ্চি</option>
-            </select>
-
-            <label>প্রোডাক্টের ধরন:</label>
-            <select id="type">
-                <option>মোটা</option>
-                <option>শক্ত</option>
-                <option>বেশি মোটা</option>
-                <option>নরমাল</option>
-            </select>
-
-            <label>আপনার নাম্বার:</label>
-            <input type="text" id="phone" placeholder="017xxxxxxxx">
-
-            <label>আপনার ঠিকানা:</label>
-            <textarea id="address" placeholder="ঠিকানা লিখুন"></textarea>
-
-            <button onclick="confirmOrder()">কনফার্ম</button>
-            <button onclick="closePopup()">বাতিল</button>
-        </div>
+    <div class="story-content" id="story-content">
+        <h2>গল্প নির্বাচন করুন</h2>
+        <p>নিচের তালিকা থেকে গল্প নির্বাচন করুন...</p>
     </div>
-
-    <div id="loading" class="loading">অর্ডার পাঠানো হচ্ছে...</div>
 
     <script src="script.js"></script>
 </body>
-              </html>
+    </html>
